@@ -21,7 +21,8 @@ export default function SWPCalculator() {
 
   const handleInputChange = (setter: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setter(value === '' ? '0' : value);
+    const cleanValue = value.replace(/^0+/, '') || '0';
+    setter(cleanValue);
   };
 
   useEffect(() => {
