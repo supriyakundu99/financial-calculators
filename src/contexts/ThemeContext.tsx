@@ -15,17 +15,31 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
+    const root = document.documentElement;
+    
+    const applyTheme = () => {
+      root.classList.remove('light', 'dark');
+      
+      let appliedTheme: string;
+      if (theme === 'system') {
+        appliedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } else {
+        appliedTheme = theme;
+      }
+      
+      root.classList.add(appliedTheme);
+      console.log('Applied theme:', appliedTheme, 'HTML classes:', root.className);
+    };
 
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-
+    applyTheme();
     localStorage.setItem('theme', theme);
+
+    // Listen for system theme changes when theme is 'system'
+    if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', applyTheme);
+      return () => mediaQuery.removeEventListener('change', applyTheme);
+    }
   }, [theme]);
 
   return (
