@@ -6,7 +6,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import DataGrid from './DataGrid';
+import DataGrid from '../controls/DataGrid';
+import CurrencyInput from '../controls/CurrencyInput';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -80,47 +81,23 @@ export default function SWPCalculator() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Withdrawal Details</h3>
           
           <div className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Initial Investment: ₹{parseInt(initialInvestment || '0').toLocaleString()}
-              </label>
-              <input
-                type="range"
-                min="100000"
-                max="1000000000"
-                step="50000"
-                value={initialInvestment}
-                onChange={(e) => setInitialInvestment(e.target.value)}
-                className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
-              />
-              <input
-                type="number"
-                value={initialInvestment}
-                onChange={handleInputChange(setInitialInvestment)}
-                className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
+            <CurrencyInput
+              value={initialInvestment}
+              onChange={setInitialInvestment}
+              label="Initial Investment"
+              min="100000"
+              max="10000000"
+              step="50000"
+            />
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Monthly Withdrawal: ₹{parseInt(monthlyWithdrawal || '0').toLocaleString()}
-              </label>
-              <input
-                type="range"
-                min="1000"
-                max="50000"
-                step="500"
-                value={monthlyWithdrawal}
-                onChange={(e) => setMonthlyWithdrawal(e.target.value)}
-                className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
-              />
-              <input
-                type="number"
-                value={monthlyWithdrawal}
-                onChange={handleInputChange(setMonthlyWithdrawal)}
-                className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
+            <CurrencyInput
+              value={monthlyWithdrawal}
+              onChange={setMonthlyWithdrawal}
+              label="Monthly Withdrawal"
+              min="1000"
+              max="50000"
+              step="500"
+            />
 
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
