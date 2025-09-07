@@ -6,6 +6,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import DataGrid from './DataGrid';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -14,6 +15,7 @@ export default function SIPCalculator() {
   const [annualReturn, setAnnualReturn] = useState('12');
   const [timePeriod, setTimePeriod] = useState('10');
   const [result, setResult] = useState<{ maturityAmount: number; totalInvestment: number; totalGains: number } | null>(null);
+  const [yearlyData, setYearlyData] = useState<any[]>([]);
 
   const handleInputChange = (setter: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -35,8 +37,27 @@ export default function SIPCalculator() {
         totalInvestment: Math.round(totalInvestment),
         totalGains: Math.round(totalGains)
       });
+
+      // Calculate yearly breakdown
+      const yearly = [];
+      let balance = 0;
+      for (let year = 1; year <= parseInt(timePeriod); year++) {
+        const monthsInYear = year * 12;
+        const yearlyMaturity = P * (((1 + r) ** monthsInYear - 1) / r) * (1 + r);
+        const yearlyInvestment = P * monthsInYear;
+        const yearlyGains = yearlyMaturity - yearlyInvestment;
+        
+        yearly.push({
+          year,
+          investment: Math.round(yearlyInvestment),
+          gains: Math.round(yearlyGains),
+          total: Math.round(yearlyMaturity)
+        });
+      }
+      setYearlyData(yearly);
     } else {
       setResult(null);
+      setYearlyData([]);
     }
   }, [monthlyInvestment, annualReturn, timePeriod]);
 
@@ -176,6 +197,18 @@ export default function SIPCalculator() {
           )}
         </div>
       </div>
+
+      {yearlyData.length > 0 && (
+        <DataGrid
+          columns={[
+            { key: 'year', title: 'Year', type: 'number' },
+            { key: 'investment', title: 'Total Investment', type: 'currency' },
+            { key: 'gains', title: 'Total Gains', type: 'currency' },
+            { key: 'total', title: 'Maturity Amount', type: 'currency' }
+          ]}
+          data={yearlyData}
+        />
+      )}
     </div>
   );
 }

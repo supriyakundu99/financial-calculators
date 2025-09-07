@@ -6,6 +6,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
+import DataGrid from './DataGrid';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -15,6 +16,7 @@ export default function SWPCalculator() {
   const [annualReturn, setAnnualReturn] = useState('10');
   const [timePeriod, setTimePeriod] = useState('15');
   const [result, setResult] = useState<{ finalValue: number; totalWithdrawn: number; remainingAmount: number } | null>(null);
+  const [yearlyData, setYearlyData] = useState<any[]>([]);
 
   const handleInputChange = (setter: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
@@ -30,10 +32,26 @@ export default function SWPCalculator() {
     if (P && W && r && n && P > 0 && W > 0 && r > 0 && n > 0) {
       let balance = P;
       let totalWithdrawn = 0;
+      const yearly = [];
 
-      for (let i = 0; i < n; i++) {
-        balance = balance * (1 + r) - W;
-        totalWithdrawn += W;
+      for (let year = 1; year <= parseInt(timePeriod); year++) {
+        let yearStartBalance = balance;
+        let yearWithdrawn = 0;
+        
+        for (let month = 1; month <= 12; month++) {
+          if (balance <= 0) break;
+          balance = balance * (1 + r) - W;
+          totalWithdrawn += W;
+          yearWithdrawn += W;
+        }
+        
+        yearly.push({
+          year,
+          startBalance: Math.round(yearStartBalance),
+          withdrawn: Math.round(yearWithdrawn),
+          endBalance: Math.round(Math.max(0, balance))
+        });
+        
         if (balance <= 0) break;
       }
 
@@ -44,8 +62,11 @@ export default function SWPCalculator() {
         totalWithdrawn: Math.round(totalWithdrawn),
         remainingAmount: Math.round(remainingAmount)
       });
+      
+      setYearlyData(yearly);
     } else {
       setResult(null);
+      setYearlyData([]);
     }
   }, [initialInvestment, monthlyWithdrawal, annualReturn, timePeriod]);
 
@@ -208,6 +229,18 @@ export default function SWPCalculator() {
           )}
         </div>
       </div>
+
+      {yearlyData.length > 0 && (
+        <DataGrid
+          columns={[
+            { key: 'year', title: 'Year', type: 'number' },
+            { key: 'startBalance', title: 'Start Balance', type: 'currency' },
+            { key: 'withdrawn', title: 'Withdrawn', type: 'currency' },
+            { key: 'endBalance', title: 'End Balance', type: 'currency' }
+          ]}
+          data={yearlyData}
+        />
+      )}
     </div>
   );
 }
