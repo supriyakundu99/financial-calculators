@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 
 export default function SWPCalculator() {
-  const [initialInvestment, setInitialInvestment] = useState('');
-  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState('');
-  const [annualReturn, setAnnualReturn] = useState('');
-  const [timePeriod, setTimePeriod] = useState('');
+  const [initialInvestment, setInitialInvestment] = useState('1000000');
+  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState('8000');
+  const [annualReturn, setAnnualReturn] = useState('10');
+  const [timePeriod, setTimePeriod] = useState('15');
   const [result, setResult] = useState<{ finalValue: number; totalWithdrawn: number; remainingAmount: number } | null>(null);
+
+  const handleInputChange = (setter: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setter(value === '' ? '0' : value);
+  };
 
   useEffect(() => {
     const P = parseFloat(initialInvestment);
@@ -39,56 +44,89 @@ export default function SWPCalculator() {
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-md mx-auto">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center">SWP Calculator</h2>
       
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Initial Investment (₹)
+            Initial Investment: ₹{parseInt(initialInvestment || '0').toLocaleString()}
           </label>
+          <input
+            type="range"
+            min="100000"
+            max="10000000"
+            step="50000"
+            value={initialInvestment}
+            onChange={(e) => setInitialInvestment(e.target.value)}
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+          />
           <input
             type="number"
             value={initialInvestment}
-            onChange={(e) => setInitialInvestment(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="1000000"
+            onChange={handleInputChange(setInitialInvestment)}
+            className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Monthly Withdrawal (₹)
+            Monthly Withdrawal: ₹{parseInt(monthlyWithdrawal || '0').toLocaleString()}
           </label>
+          <input
+            type="range"
+            min="1000"
+            max="50000"
+            step="500"
+            value={monthlyWithdrawal}
+            onChange={(e) => setMonthlyWithdrawal(e.target.value)}
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+          />
           <input
             type="number"
             value={monthlyWithdrawal}
-            onChange={(e) => setMonthlyWithdrawal(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="8000"
+            onChange={handleInputChange(setMonthlyWithdrawal)}
+            className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Expected Annual Return (%)
+            Expected Annual Return: {annualReturn}%
           </label>
           <input
-            type="number"
+            type="range"
+            min="1"
+            max="25"
+            step="0.5"
             value={annualReturn}
             onChange={(e) => setAnnualReturn(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="10"
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+          />
+          <input
+            type="number"
+            step="0.5"
+            value={annualReturn}
+            onChange={handleInputChange(setAnnualReturn)}
+            className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-            Withdrawal Period (Years)
+            Withdrawal Period: {timePeriod} years
           </label>
+          <input
+            type="range"
+            min="1"
+            max="80"
+            step="1"
+            value={timePeriod}
+            onChange={(e) => setTimePeriod(e.target.value)}
+            className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer slider"
+          />
           <input
             type="number"
             value={timePeriod}
-            onChange={(e) => setTimePeriod(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="15"
+            onChange={handleInputChange(setTimePeriod)}
+            className="w-full mt-2 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
       </div>
