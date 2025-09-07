@@ -1,4 +1,4 @@
-import SIPCalculator from '../components/SIPCalculator';
+import SIPCalculator from "../components/SIPCalculator";
 
 export default function SIPPage() {
   return (

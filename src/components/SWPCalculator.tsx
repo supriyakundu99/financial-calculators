@@ -1,29 +1,30 @@
-import { useState, useEffect } from 'react';
-import { Pie } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import DataGrid from '../controls/DataGrid';
-import CurrencyInput from '../controls/CurrencyInput';
+import { useState, useEffect } from "react";
+import { Pie } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import DataGrid from "../controls/DataGrid";
+import CurrencyInput from "../controls/CurrencyInput";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function SWPCalculator() {
-  const [initialInvestment, setInitialInvestment] = useState('1000000');
-  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState('8000');
-  const [annualReturn, setAnnualReturn] = useState('10');
-  const [timePeriod, setTimePeriod] = useState('15');
-  const [result, setResult] = useState<{ finalValue: number; totalWithdrawn: number; remainingAmount: number } | null>(null);
+  const [initialInvestment, setInitialInvestment] = useState("1000000");
+  const [monthlyWithdrawal, setMonthlyWithdrawal] = useState("8000");
+  const [annualReturn, setAnnualReturn] = useState("10");
+  const [timePeriod, setTimePeriod] = useState("15");
+  const [result, setResult] = useState<{
+    finalValue: number;
+    totalWithdrawn: number;
+    remainingAmount: number;
+  } | null>(null);
   const [yearlyData, setYearlyData] = useState<any[]>([]);
 
-  const handleInputChange = (setter: (value: string) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    const cleanValue = value.replace(/^0+/, '') || '0';
-    setter(cleanValue);
-  };
+  const handleInputChange =
+    (setter: (value: string) => void) =>
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
+      const cleanValue = value.replace(/^0+/, "") || "0";
+      setter(cleanValue);
+    };
 
   useEffect(() => {
     const P = parseFloat(initialInvestment);
@@ -37,34 +38,34 @@ export default function SWPCalculator() {
       const yearly = [];
 
       for (let year = 1; year <= parseInt(timePeriod); year++) {
-        let yearStartBalance = balance;
+        const yearStartBalance = balance;
         let yearWithdrawn = 0;
-        
+
         for (let month = 1; month <= 12; month++) {
           if (balance <= 0) break;
           balance = balance * (1 + r) - W;
           totalWithdrawn += W;
           yearWithdrawn += W;
         }
-        
+
         yearly.push({
           year,
           startBalance: Math.round(yearStartBalance),
           withdrawn: Math.round(yearWithdrawn),
-          endBalance: Math.round(Math.max(0, balance))
+          endBalance: Math.round(Math.max(0, balance)),
         });
-        
+
         if (balance <= 0) break;
       }
 
       const remainingAmount = Math.max(0, balance);
-      
+
       setResult({
         finalValue: Math.round(remainingAmount),
         totalWithdrawn: Math.round(totalWithdrawn),
-        remainingAmount: Math.round(remainingAmount)
+        remainingAmount: Math.round(remainingAmount),
       });
-      
+
       setYearlyData(yearly);
     } else {
       setResult(null);
@@ -74,13 +75,17 @@ export default function SWPCalculator() {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">SWP Calculator</h2>
-      
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
+        SWP Calculator
+      </h2>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Calculator Inputs */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Withdrawal Details</h3>
-          
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
+            Withdrawal Details
+          </h3>
+
           <div className="space-y-6">
             <CurrencyInput
               value={initialInvestment}
@@ -147,18 +152,28 @@ export default function SWPCalculator() {
 
         {/* Results with Pie Chart */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Results</h3>
-          
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
+            Results
+          </h3>
+
           {result ? (
             <>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between items-center p-3 bg-red-50 dark:bg-red-900/20 rounded">
-                  <span className="text-gray-700 dark:text-gray-300">Total Withdrawn:</span>
-                  <span className="font-bold text-red-600 dark:text-red-400">₹{result.totalWithdrawn.toLocaleString()}</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Total Withdrawn:
+                  </span>
+                  <span className="font-bold text-red-600 dark:text-red-400">
+                    ₹{result.totalWithdrawn.toLocaleString()}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-green-50 dark:bg-green-900/20 rounded">
-                  <span className="text-gray-700 dark:text-gray-300">Remaining Amount:</span>
-                  <span className="font-bold text-green-600 dark:text-green-400">₹{result.remainingAmount.toLocaleString()}</span>
+                  <span className="text-gray-700 dark:text-gray-300">
+                    Remaining Amount:
+                  </span>
+                  <span className="font-bold text-green-600 dark:text-green-400">
+                    ₹{result.remainingAmount.toLocaleString()}
+                  </span>
                 </div>
               </div>
 
@@ -168,33 +183,38 @@ export default function SWPCalculator() {
                 </div>
               ) : (
                 <div className="h-64">
-                  <Pie 
+                  <Pie
                     data={{
-                      labels: ['Withdrawn', 'Remaining'],
-                      datasets: [{
-                        data: [result.totalWithdrawn, result.remainingAmount],
-                        backgroundColor: ['#ef4444', '#10b981'],
-                        borderWidth: 2,
-                        borderColor: '#ffffff',
-                      }]
+                      labels: ["Withdrawn", "Remaining"],
+                      datasets: [
+                        {
+                          data: [result.totalWithdrawn, result.remainingAmount],
+                          backgroundColor: ["#ef4444", "#10b981"],
+                          borderWidth: 2,
+                          borderColor: "#ffffff",
+                        },
+                      ],
                     }}
                     options={{
                       responsive: true,
                       maintainAspectRatio: false,
                       plugins: {
-                        legend: { 
-                          position: 'bottom',
+                        legend: {
+                          position: "bottom",
                           labels: {
                             padding: 20,
                             usePointStyle: true,
-                          }
+                          },
                         },
                         tooltip: {
                           callbacks: {
-                            label: (context: any) => `${context.label}: ₹${context.parsed.toLocaleString()}`
-                          }
-                        }
-                      }
+                            label: (context: any) =>
+                              `${
+                                context.label
+                              }: ₹${context.parsed.toLocaleString()}`,
+                          },
+                        },
+                      },
                     }}
                   />
                 </div>
@@ -211,10 +231,10 @@ export default function SWPCalculator() {
       {yearlyData.length > 0 && (
         <DataGrid
           columns={[
-            { key: 'year', title: 'Year', type: 'number' },
-            { key: 'startBalance', title: 'Start Balance', type: 'currency' },
-            { key: 'withdrawn', title: 'Withdrawn', type: 'currency' },
-            { key: 'endBalance', title: 'End Balance', type: 'currency' }
+            { key: "year", title: "Year", type: "number" },
+            { key: "startBalance", title: "Start Balance", type: "currency" },
+            { key: "withdrawn", title: "Withdrawn", type: "currency" },
+            { key: "endBalance", title: "End Balance", type: "currency" },
           ]}
           data={yearlyData}
         />

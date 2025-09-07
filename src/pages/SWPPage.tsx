@@ -1,4 +1,4 @@
-import SWPCalculator from '../components/SWPCalculator';
+import SWPCalculator from "../components/SWPCalculator";
 
 export default function SWPPage() {
   return (

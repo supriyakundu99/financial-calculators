@@ -1,9 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeContext';
-import AppLayout from './components/AppLayout';
-import Home from './pages/Home';
-import SIPPage from './pages/SIPPage';
-import SWPPage from './pages/SWPPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import AppLayout from "./components/AppLayout";
+import Home from "./pages/Home";
+import SIPPage from "./pages/SIPPage";
+import SWPPage from "./pages/SWPPage";
 
 function App() {
   return (
