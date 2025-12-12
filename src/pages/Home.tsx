@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Financial Calculators - Free SIP & SWP Calculator Online"
-        description="Free online financial calculators for investment planning. Calculate SIP returns, SWP withdrawals with interactive charts and detailed analysis. Start your financial planning today."
-        keywords="financial calculator, SIP calculator, SWP calculator, investment planning, mutual fund calculator, retirement planning"
+        title="Financial Calculators - Free SIP, SWP & Lumpsum Calculator Online"
+        description="Free online financial calculators for investment planning. Calculate SIP returns, SWP withdrawals, and Lumpsum investments with interactive charts and detailed analysis. Start your financial planning today."
+        keywords="financial calculator, SIP calculator, SWP calculator, Lumpsum calculator, investment planning, mutual fund calculator, retirement planning"
       />
       <div className="flex items-center justify-center min-h-[calc(100vh-128px)]">
         <div className="text-center max-w-4xl mx-auto px-4">
@@ -34,6 +34,13 @@ export default function Home() {
             >
               <h2 className="text-xl font-semibold mb-2">SWP Calculator</h2>
               <p className="text-green-100">Plan Systematic Withdrawal Plan</p>
+            </Link>
+            <Link
+              to="/lumpsum"
+              className="block bg-purple-600 hover:bg-purple-700 text-white font-medium py-4 px-8 rounded-lg transition-colors shadow-lg"
+            >
+              <h2 className="text-xl font-semibold mb-2">Lumpsum Calculator</h2>
+              <p className="text-purple-100">Calculate Lumpsum Investment returns</p>
             </Link>
           </div>
         </div>

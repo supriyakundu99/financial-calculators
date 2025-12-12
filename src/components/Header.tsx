@@ -26,6 +26,12 @@ export default function Header() {
             >
               SWP Calculator
             </Link>
+            <Link
+              to="/lumpsum"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+            >
+              Lumpsum Calculator
+            </Link>
             <ThemeToggle />
           </nav>
         </div>

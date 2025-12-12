@@ -1,5 +1,6 @@
 import SIPCalculator from "../components/SIPCalculator";
 import SWPCalculator from "../components/SWPCalculator";
+import LumpsumCalculator from "../components/LumpsumCalculator";
 import ThemeToggle from "../components/ThemeToggle";
 
 export default function Calculators() {
@@ -14,10 +15,11 @@ export default function Calculators() {
           Financial Calculators
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <SIPCalculator />
-          <SWPCalculator />
-        </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <SIPCalculator />
+            <SWPCalculator />
+            <LumpsumCalculator />
+          </div>
       </div>
     </div>
   );
