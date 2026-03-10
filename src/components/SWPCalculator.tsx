@@ -3,6 +3,7 @@ import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import DataGrid from "../controls/DataGrid";
 import CurrencyInput from "../controls/CurrencyInput";
+import { numberToWords } from "../utils/numberUtils";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -167,6 +168,9 @@ export default function SWPCalculator() {
                     ₹{result.totalWithdrawn.toLocaleString()}
                   </span>
                 </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 text-right">
+                  {numberToWords(result.totalWithdrawn)} Rupees
+                </div>
                 <div className="flex justify-between items-center p-3 bg-green-50 dark:bg-green-900/20 rounded">
                   <span className="text-gray-700 dark:text-gray-300">
                     Remaining Amount:
@@ -174,6 +178,9 @@ export default function SWPCalculator() {
                   <span className="font-bold text-green-600 dark:text-green-400">
                     ₹{result.remainingAmount.toLocaleString()}
                   </span>
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 text-right">
+                  {numberToWords(result.remainingAmount)} Rupees
                 </div>
               </div>
 

@@ -3,6 +3,7 @@ import { Pie } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import DataGrid from "../controls/DataGrid";
 import CurrencyInput from "../controls/CurrencyInput";
+import { numberToWords } from "../utils/numberUtils";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -160,6 +161,9 @@ export default function LumpsumCalculator() {
                   <span className="font-bold text-lg text-purple-600 dark:text-purple-400">
                     ₹{result.maturityAmount.toLocaleString()}
                   </span>
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 text-right">
+                  {numberToWords(result.maturityAmount)} Rupees
                 </div>
               </div>
 
