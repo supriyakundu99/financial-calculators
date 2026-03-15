@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "আর্থিক ক্যালকুলেটর",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc লোগো",
+    "footer": "© ২০২৪ আর্থিক ক্যালকুলেটর। React ও Tailwind CSS দিয়ে তৈরি।"
+  },
+  "nav": {
+    "sip": "SIP ক্যালকুলেটর",
+    "swp": "SWP ক্যালকুলেটর",
+    "lumpsum": "একমুঠো ক্যালকুলেটর"
+  },
+  "theme": {
+    "system": "সিস্টেম",
+    "light": "আলো",
+    "dark": "অন্ধকার"
+  },
+  "home": {
+    "title": "আর্থিক ক্যালকুলেটর",
+    "subtitle": "আমাদের বিনামূল্যে অনলাইন ক্যালকুলেটর দিয়ে আপনার বিনিয়োগ পরিকল্পনা করুন",
+    "description": "SIP রিটার্ন গণনা করুন, ইন্টারেক্টিভ চার্ট ও বার্ষিক বিশ্লেষণ সহ SWP উত্তোলন পরিকল্পনা করুন",
+    "sip": {
+      "title": "SIP ক্যালকুলেটর",
+      "description": "সিস্টেমেটিক ইনভেস্টমেন্ট প্ল্যানের রিটার্ন গণনা করুন"
+    },
+    "swp": {
+      "title": "SWP ক্যালকুলেটর",
+      "description": "সিস্টেমেটিক উইথড্রয়াল প্ল্যান পরিকল্পনা করুন"
+    },
+    "lumpsum": {
+      "title": "একমুঠো ক্যালকুলেটর",
+      "description": "একমুঠো বিনিয়োগের রিটার্ন গণনা করুন"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "আর্থিক ক্যালকুলেটর - বিনামূল্যে SIP, SWP ও একমুঠো ক্যালকুলেটর",
+      "description": "বিনিয়োগ পরিকল্পনার জন্য বিনামূল্যে অনলাইন আর্থিক ক্যালকুলেটর। ইন্টারেক্টিভ চার্ট সহ SIP রিটার্ন, SWP উত্তোলন ও একমুঠো বিনিয়োগ গণনা করুন।",
+      "keywords": "আর্থিক ক্যালকুলেটর, SIP ক্যালকুলেটর, SWP ক্যালকুলেটর, একমুঠো ক্যালকুলেটর, বিনিয়োগ পরিকল্পনা"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "বিনিয়োগের বিবরণ",
+    "withdrawalDetails": "উত্তোলনের বিবরণ",
+    "results": "ফলাফল",
+    "emptyInvestment": "ফলাফল দেখতে সঠিক বিনিয়োগের তথ্য দিন",
+    "emptyWithdrawal": "ফলাফল দেখতে সঠিক উত্তোলনের তথ্য দিন",
+    "fundsExhausted": "⚠️ মেয়াদ শেষ হওয়ার আগেই তহবিল শেষ হয়ে যাবে",
+    "yearlyBreakdown": "বার্ষিক বিশ্লেষণ",
+    "rupees": "টাকা"
+  },
+  "fields": {
+    "monthlyInvestment": "মাসিক বিনিয়োগ",
+    "totalInvestment": "মোট বিনিয়োগ",
+    "initialInvestment": "প্রাথমিক বিনিয়োগ",
+    "monthlyWithdrawal": "মাসিক উত্তোলন",
+    "annualReturn": "প্রত্যাশিত বার্ষিক রিটার্ন",
+    "timePeriod": "সময়কাল",
+    "withdrawalPeriod": "উত্তোলনের মেয়াদ"
+  },
+  "results": {
+    "totalInvestment": "মোট বিনিয়োগ",
+    "totalGains": "মোট লাভ",
+    "maturityAmount": "পরিপক্কতার পরিমাণ",
+    "totalWithdrawn": "মোট উত্তোলন",
+    "remainingAmount": "অবশিষ্ট পরিমাণ"
+  },
+  "chart": {
+    "investment": "বিনিয়োগ",
+    "gains": "লাভ",
+    "withdrawn": "উত্তোলন",
+    "remaining": "অবশিষ্ট"
+  },
+  "grid": {
+    "year": "বছর",
+    "totalInvestment": "মোট বিনিয়োগ",
+    "totalGains": "মোট লাভ",
+    "maturityAmount": "পরিপক্কতার পরিমাণ",
+    "startBalance": "শুরুর ব্যালেন্স",
+    "withdrawn": "উত্তোলন",
+    "endBalance": "শেষের ব্যালেন্স"
+  },
+  "inflation": {
+    "title": "মুদ্রাস্ফীতি সমন্বিত মূল্য",
+    "rateLabel": "হার (%):",
+    "purchasingPower": "{{years}} বছর পরে ক্রয় ক্ষমতা"
+  }
+}

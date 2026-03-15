@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "वित्तीय कैलकुलेटर",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc लोगो",
+    "footer": "© २०२४ वित्तीय कैलकुलेटर। React और Tailwind CSS के साथ बनाया गया।"
+  },
+  "nav": {
+    "sip": "SIP कैलकुलेटर",
+    "swp": "SWP कैलकुलेटर",
+    "lumpsum": "एकमुश्त कैलकुलेटर"
+  },
+  "theme": {
+    "system": "सिस्टम",
+    "light": "लाइट",
+    "dark": "डार्क"
+  },
+  "home": {
+    "title": "वित्तीय कैलकुलेटर",
+    "subtitle": "हमारे मुफ्त ऑनलाइन कैलकुलेटर से अपने निवेश की योजना बनाएं",
+    "description": "SIP रिटर्न की गणना करें, इंटरेक्टिव चार्ट और वार्षिक विश्लेषण के साथ SWP निकासी की योजना बनाएं",
+    "sip": {
+      "title": "SIP कैलकुलेटर",
+      "description": "सिस्टेमेटिक इन्वेस्टमेंट प्लान का रिटर्न गणना करें"
+    },
+    "swp": {
+      "title": "SWP कैलकुलेटर",
+      "description": "सिस्टेमेटिक विड्रॉल प्लान की योजना बनाएं"
+    },
+    "lumpsum": {
+      "title": "एकमुश्त कैलकुलेटर",
+      "description": "एकमुश्त निवेश का रिटर्न गणना करें"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "वित्तीय कैलकुलेटर - मुफ्त SIP, SWP और एकमुश्त कैलकुलेटर",
+      "description": "निवेश योजना के लिए मुफ्त ऑनलाइन वित्तीय कैलकुलेटर। इंटरेक्टिव चार्ट के साथ SIP रिटर्न, SWP निकासी और एकमुश्त निवेश की गणना करें।",
+      "keywords": "वित्तीय कैलकुलेटर, SIP कैलकुलेटर, SWP कैलकुलेटर, एकमुश्त कैलकुलेटर, निवेश योजना"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "निवेश विवरण",
+    "withdrawalDetails": "निकासी विवरण",
+    "results": "परिणाम",
+    "emptyInvestment": "परिणाम देखने के लिए सही निवेश विवरण दर्ज करें",
+    "emptyWithdrawal": "परिणाम देखने के लिए सही निकासी विवरण दर्ज करें",
+    "fundsExhausted": "⚠️ अवधि समाप्त होने से पहले धनराशि समाप्त हो जाएगी",
+    "yearlyBreakdown": "वार्षिक विश्लेषण",
+    "rupees": "रुपये"
+  },
+  "fields": {
+    "monthlyInvestment": "मासिक निवेश",
+    "totalInvestment": "कुल निवेश",
+    "initialInvestment": "प्रारंभिक निवेश",
+    "monthlyWithdrawal": "मासिक निकासी",
+    "annualReturn": "अपेक्षित वार्षिक रिटर्न",
+    "timePeriod": "समय अवधि",
+    "withdrawalPeriod": "निकासी अवधि"
+  },
+  "results": {
+    "totalInvestment": "कुल निवेश",
+    "totalGains": "कुल लाभ",
+    "maturityAmount": "परिपक्वता राशि",
+    "totalWithdrawn": "कुल निकासी",
+    "remainingAmount": "शेष राशि"
+  },
+  "chart": {
+    "investment": "निवेश",
+    "gains": "लाभ",
+    "withdrawn": "निकासी",
+    "remaining": "शेष"
+  },
+  "grid": {
+    "year": "वर्ष",
+    "totalInvestment": "कुल निवेश",
+    "totalGains": "कुल लाभ",
+    "maturityAmount": "परिपक्वता राशि",
+    "startBalance": "शुरुआती बैलेंस",
+    "withdrawn": "निकासी",
+    "endBalance": "अंतिम बैलेंस"
+  },
+  "inflation": {
+    "title": "मुद्रास्फीति समायोजित मूल्य",
+    "rateLabel": "दर (%):",
+    "purchasingPower": "{{years}} वर्ष बाद क्रय शक्ति"
+  }
+}
