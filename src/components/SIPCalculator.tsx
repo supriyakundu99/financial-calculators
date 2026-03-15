@@ -4,6 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import DataGrid from "../controls/DataGrid";
 import CurrencyInput from "../controls/CurrencyInput";
 import { numberToWords } from "../utils/numberUtils";
+import InflationAdjustedValue from "../controls/InflationAdjustedValue";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -16,7 +17,7 @@ export default function SIPCalculator() {
     totalInvestment: number;
     totalGains: number;
   } | null>(null);
-  const [yearlyData, setYearlyData] = useState<unknown[]>([]);
+  const [yearlyData, setYearlyData] = useState<Record<string, any>[]>([]);
 
   const handleInputChange =
     (setter: (value: string) => void) =>
@@ -170,6 +171,8 @@ export default function SIPCalculator() {
                   {numberToWords(result.maturityAmount)} Rupees
                 </div>
               </div>
+
+              <InflationAdjustedValue value={result.maturityAmount} years={parseFloat(timePeriod)} />
 
               <div className="h-64">
                 <Pie

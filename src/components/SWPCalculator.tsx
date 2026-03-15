@@ -4,6 +4,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import DataGrid from "../controls/DataGrid";
 import CurrencyInput from "../controls/CurrencyInput";
 import { numberToWords } from "../utils/numberUtils";
+import InflationAdjustedValue from "../controls/InflationAdjustedValue";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -183,6 +184,8 @@ export default function SWPCalculator() {
                   {numberToWords(result.remainingAmount)} Rupees
                 </div>
               </div>
+
+              <InflationAdjustedValue value={result.remainingAmount} years={parseFloat(timePeriod)} />
 
               {result.remainingAmount <= 0 ? (
                 <div className="p-4 bg-red-100 dark:bg-red-900/30 rounded text-red-700 dark:text-red-300 text-center">
