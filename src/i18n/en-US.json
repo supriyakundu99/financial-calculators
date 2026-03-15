@@ -1,0 +1,88 @@
+{
+  "app": {
+    "name": "Financial Calculators",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc Logo",
+    "footer": "© 2024 Financial Calculators. Built with React & Tailwind CSS."
+  },
+  "nav": {
+    "sip": "SIP Calculator",
+    "swp": "SWP Calculator",
+    "lumpsum": "Lumpsum Calculator"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "home": {
+    "title": "Financial Calculators",
+    "subtitle": "Plan your investments with our free online calculators",
+    "description": "Calculate SIP returns, plan SWP withdrawals with interactive charts and yearly breakdowns",
+    "sip": {
+      "title": "SIP Calculator",
+      "description": "Calculate Systematic Investment Plan returns"
+    },
+    "swp": {
+      "title": "SWP Calculator",
+      "description": "Plan Systematic Withdrawal Plan"
+    },
+    "lumpsum": {
+      "title": "Lumpsum Calculator",
+      "description": "Calculate Lumpsum Investment returns"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Financial Calculators - Free SIP, SWP & Lumpsum Calculator Online",
+      "description": "Free online financial calculators for investment planning. Calculate SIP returns, SWP withdrawals, and Lumpsum investments with interactive charts and detailed analysis. Start your financial planning today.",
+      "keywords": "financial calculator, SIP calculator, SWP calculator, Lumpsum calculator, investment planning, mutual fund calculator, retirement planning"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "Investment Details",
+    "withdrawalDetails": "Withdrawal Details",
+    "results": "Results",
+    "emptyInvestment": "Enter valid investment details to see results",
+    "emptyWithdrawal": "Enter valid withdrawal details to see results",
+    "fundsExhausted": "⚠️ Funds will be exhausted before the end of the period",
+    "yearlyBreakdown": "Yearly Breakdown",
+    "rupees": "Rupees"
+  },
+  "fields": {
+    "monthlyInvestment": "Monthly Investment",
+    "totalInvestment": "Total Investment",
+    "initialInvestment": "Initial Investment",
+    "monthlyWithdrawal": "Monthly Withdrawal",
+    "annualReturn": "Expected Annual Return",
+    "timePeriod": "Time Period",
+    "withdrawalPeriod": "Withdrawal Period"
+  },
+  "results": {
+    "totalInvestment": "Total Investment",
+    "totalGains": "Total Gains",
+    "maturityAmount": "Maturity Amount",
+    "totalWithdrawn": "Total Withdrawn",
+    "remainingAmount": "Remaining Amount"
+  },
+  "chart": {
+    "investment": "Investment",
+    "gains": "Gains",
+    "withdrawn": "Withdrawn",
+    "remaining": "Remaining"
+  },
+  "grid": {
+    "year": "Year",
+    "totalInvestment": "Total Investment",
+    "totalGains": "Total Gains",
+    "maturityAmount": "Maturity Amount",
+    "startBalance": "Start Balance",
+    "withdrawn": "Withdrawn",
+    "endBalance": "End Balance"
+  },
+  "inflation": {
+    "title": "Inflation Adjusted Value",
+    "rateLabel": "Rate (%):",
+    "purchasingPower": "Purchasing power after {{years}} years"
+  }
+}

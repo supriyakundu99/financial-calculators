@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useTranslation } from "../hooks/useTranslation";
 
 interface CalculatorLayoutProps {
   title: string;
@@ -13,12 +14,14 @@ const cardClass = "bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6";
 
 export default function CalculatorLayout({
   title,
-  inputsTitle = "Investment Details",
-  resultsTitle = "Results",
+  inputsTitle,
+  resultsTitle,
   inputs,
   results,
   children,
 }: CalculatorLayoutProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-7xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">
@@ -28,14 +31,14 @@ export default function CalculatorLayout({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className={cardClass}>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
-            {inputsTitle}
+            {inputsTitle ?? t("calculator.investmentDetails")}
           </h3>
           <div className="space-y-6">{inputs}</div>
         </div>
 
         <div className={cardClass}>
           <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-6">
-            {resultsTitle}
+            {resultsTitle ?? t("calculator.results")}
           </h3>
           {results}
         </div>

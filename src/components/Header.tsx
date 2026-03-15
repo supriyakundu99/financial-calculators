@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import { useTranslation } from "../hooks/useTranslation";
 
 export default function Header() {
+  const { t } = useTranslation();
+
   return (
     <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,31 +15,22 @@ export default function Header() {
           >
             <img
               src="/logo.svg"
-              alt="FinCalc Logo"
+              alt={t("app.logoAlt")}
               className="h-8 w-8 shrink-0 dark:brightness-110"
             />
-            <span className="hidden sm:block">Financial Calculators</span>
-            <span className="sm:hidden block">FinCalc</span>
+            <span className="hidden sm:block">{t("app.name")}</span>
+            <span className="sm:hidden block">{t("app.nameShort")}</span>
           </Link>
 
           <nav className="flex items-center space-x-2 sm:space-x-6">
-            <Link
-              to="/sip"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
-            >
-              SIP Calculator
+            <Link to="/sip" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+              {t("nav.sip")}
             </Link>
-            <Link
-              to="/swp"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
-            >
-              SWP Calculator
+            <Link to="/swp" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+              {t("nav.swp")}
             </Link>
-            <Link
-              to="/lumpsum"
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
-            >
-              Lumpsum Calculator
+            <Link to="/lumpsum" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
+              {t("nav.lumpsum")}
             </Link>
             <ThemeToggle />
           </nav>
