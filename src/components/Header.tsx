@@ -8,12 +8,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link
             to="/"
-            className="text-xl font-bold text-gray-900 dark:text-gray-100"
+            className="flex items-center gap-3 text-xl font-bold text-gray-900 dark:text-gray-100"
           >
-            Financial Calculators
+            <img src="/logo.svg" alt="FinCalc Logo" className="h-8 w-8 shrink-0 dark:brightness-110" />
+            <span className="hidden sm:block">Financial Calculators</span>
+            <span className="sm:hidden block">FinCalc</span>
           </Link>
 
-          <nav className="flex items-center space-x-6">
+          <nav className="flex items-center space-x-2 sm:space-x-6">
             <Link
               to="/sip"
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
