@@ -19,17 +19,29 @@
     "title": "Financial Calculators",
     "subtitle": "Plan your investments with our free online calculators",
     "description": "Calculate SIP returns, plan SWP withdrawals with interactive charts and yearly breakdowns",
+    "cta": "Start Calculating",
+    "stats": {
+      "calculators": "3 Calculators",
+      "calculatorsDesc": "SIP · SWP · Lumpsum",
+      "charts": "Interactive Charts",
+      "chartsDesc": "Visual breakdowns",
+      "inflation": "Inflation Adjusted",
+      "inflationDesc": "Real value insights"
+    },
     "sip": {
       "title": "SIP Calculator",
-      "description": "Calculate Systematic Investment Plan returns"
+      "description": "Calculate Systematic Investment Plan returns",
+      "detail": "Monthly investments · Compound growth · Yearly breakdown"
     },
     "swp": {
       "title": "SWP Calculator",
-      "description": "Plan Systematic Withdrawal Plan"
+      "description": "Plan Systematic Withdrawal Plan",
+      "detail": "Withdrawal planning · Fund longevity · Balance tracking"
     },
     "lumpsum": {
       "title": "Lumpsum Calculator",
-      "description": "Calculate Lumpsum Investment returns"
+      "description": "Calculate Lumpsum Investment returns",
+      "detail": "One-time investment · Long-term growth · Inflation adjusted"
     }
   },
   "seo": {
