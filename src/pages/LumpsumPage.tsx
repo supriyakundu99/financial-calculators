@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 export default function LumpsumPage() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Lumpsum Calculator - Calculate Lumpsum Investment Returns Online"
         description="Calculate your Lumpsum investment returns with our free online Lumpsum calculator. Plan your one-time investment with interactive charts, yearly breakdown and detailed analysis."
         keywords="Lumpsum calculator, one-time investment, mutual fund lumpsum, investment returns, wealth creation"

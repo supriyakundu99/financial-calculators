@@ -15,11 +15,11 @@ export default function Calculators() {
           Financial Calculators
         </h1>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <SIPCalculator />
-            <SWPCalculator />
-            <LumpsumCalculator />
-          </div>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <SIPCalculator />
+          <SWPCalculator />
+          <LumpsumCalculator />
+        </div>
       </div>
     </div>
   );

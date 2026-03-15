@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = "light" | "dark" | "system";
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,34 +11,41 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem('theme') as Theme) || 'system';
+    return (localStorage.getItem("theme") as Theme) || "system";
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    
+
     const applyTheme = () => {
-      root.classList.remove('light', 'dark');
-      
+      root.classList.remove("light", "dark");
+
       let appliedTheme: string;
-      if (theme === 'system') {
-        appliedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (theme === "system") {
+        appliedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
       } else {
         appliedTheme = theme;
       }
-      
+
       root.classList.add(appliedTheme);
-      console.log('Applied theme:', appliedTheme, 'HTML classes:', root.className);
+      console.log(
+        "Applied theme:",
+        appliedTheme,
+        "HTML classes:",
+        root.className,
+      );
     };
 
     applyTheme();
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
 
     // Listen for system theme changes when theme is 'system'
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      mediaQuery.addEventListener('change', applyTheme);
-      return () => mediaQuery.removeEventListener('change', applyTheme);
+    if (theme === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      mediaQuery.addEventListener("change", applyTheme);
+      return () => mediaQuery.removeEventListener("change", applyTheme);
     }
   }, [theme]);
 
@@ -52,7 +59,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
 }

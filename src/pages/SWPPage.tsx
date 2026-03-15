@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 export default function SWPPage() {
   return (
     <>
-      <SEO 
+      <SEO
         title="SWP Calculator - Systematic Withdrawal Plan Calculator Online"
         description="Calculate your SWP withdrawals with our free online SWP calculator. Plan your systematic withdrawal with interactive charts and yearly breakdown analysis."
         keywords="SWP calculator, systematic withdrawal plan, retirement planning, withdrawal calculator, investment withdrawal"

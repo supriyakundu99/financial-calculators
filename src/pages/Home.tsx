@@ -4,7 +4,7 @@ import SEO from "../components/SEO";
 export default function Home() {
   return (
     <>
-      <SEO 
+      <SEO
         title="Financial Calculators - Free SIP, SWP & Lumpsum Calculator Online"
         description="Free online financial calculators for investment planning. Calculate SIP returns, SWP withdrawals, and Lumpsum investments with interactive charts and detailed analysis. Start your financial planning today."
         keywords="financial calculator, SIP calculator, SWP calculator, Lumpsum calculator, investment planning, mutual fund calculator, retirement planning"
@@ -18,7 +18,8 @@ export default function Home() {
             Plan your investments with our free online calculators
           </p>
           <p className="text-lg text-gray-500 dark:text-gray-500 mb-8">
-            Calculate SIP returns, plan SWP withdrawals with interactive charts and yearly breakdowns
+            Calculate SIP returns, plan SWP withdrawals with interactive charts
+            and yearly breakdowns
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <Link
@@ -26,7 +27,9 @@ export default function Home() {
               className="block bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-8 rounded-lg transition-colors shadow-lg"
             >
               <h2 className="text-xl font-semibold mb-2">SIP Calculator</h2>
-              <p className="text-blue-100">Calculate Systematic Investment Plan returns</p>
+              <p className="text-blue-100">
+                Calculate Systematic Investment Plan returns
+              </p>
             </Link>
             <Link
               to="/swp"
@@ -40,7 +43,9 @@ export default function Home() {
               className="block bg-purple-600 hover:bg-purple-700 text-white font-medium py-4 px-8 rounded-lg transition-colors shadow-lg"
             >
               <h2 className="text-xl font-semibold mb-2">Lumpsum Calculator</h2>
-              <p className="text-purple-100">Calculate Lumpsum Investment returns</p>
+              <p className="text-purple-100">
+                Calculate Lumpsum Investment returns
+              </p>
             </Link>
           </div>
         </div>
