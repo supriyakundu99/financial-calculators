@@ -3,7 +3,10 @@ import { createContext, useContext, useState } from "react";
 export const LOCALES = {
   "en-US": "English",
   "bn-IN": "বাংলা",
+  "gu-IN": "ગુજરાતી",
   "hi-IN": "हिन्दी",
+  "mr-IN": "मराठी",
+  "pa-IN": "ਪੰਜਾਬੀ",
   "ta-IN": "தமிழ்",
   "te-IN": "తెలుగు",
 } as const;

@@ -1,0 +1,100 @@
+{
+  "app": {
+    "name": "નાણાકીય કેલ્ક્યુલેટર",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc લોગો",
+    "footer": "© 2024 નાણાકીય કેલ્ક્યુલેટર. React અને Tailwind CSS સાથે બનાવેલ."
+  },
+  "nav": {
+    "sip": "SIP કેલ્ક્યુલેટર",
+    "swp": "SWP કેલ્ક્યુલેટર",
+    "lumpsum": "એકસામટી રકમ કેલ્ક્યુલેટર"
+  },
+  "theme": {
+    "system": "સિસ્ટમ",
+    "light": "લાઇટ",
+    "dark": "ડાર્ક"
+  },
+  "home": {
+    "title": "નાણાકીય કેલ્ક્યુલેટર",
+    "subtitle": "અમારા મફત ઓનલાઇન કેલ્ક્યુલેટર વડે તમારું રોકાણ આયોજન કરો",
+    "description": "SIP વળતર ગણો, ઇન્ટરેક્ટિવ ચાર્ટ અને વાર્ષિક વિગત સાથે SWP ઉપાડ આયોજન કરો",
+    "cta": "ગણતરી શરૂ કરો",
+    "stats": {
+      "calculators": "3 કેલ્ક્યુલેટર",
+      "calculatorsDesc": "SIP · SWP · એકસામટી",
+      "charts": "ઇન્ટરેક્ટિવ ચાર્ટ",
+      "chartsDesc": "દ્રશ્ય વિશ્લેષણ",
+      "inflation": "ફુગાવો સમાયોજિત",
+      "inflationDesc": "વાસ્તવિક મૂલ્ય આંતરદૃષ્ટિ"
+    },
+    "sip": {
+      "title": "SIP કેલ્ક્યુલેટર",
+      "description": "વ્યવસ્થિત રોકાણ યોજનાનું વળતર ગણો",
+      "detail": "માસિક રોકાણ · ચક્રવૃદ્ધિ વૃદ્ધિ · વાર્ષિક વિગત"
+    },
+    "swp": {
+      "title": "SWP કેલ્ક્યુલેટર",
+      "description": "વ્યવસ્થિત ઉપાડ યોજના આયોજન કરો",
+      "detail": "ઉપાડ આયોજન · ભંડોળ અવધિ · બેલેન્સ ટ્રેકિંગ"
+    },
+    "lumpsum": {
+      "title": "એકસામટી રકમ કેલ્ક્યુલેટર",
+      "description": "એકસામટી રોકાણનું વળતર ગણો",
+      "detail": "એકવારનું રોકાણ · લાંબા ગાળાની વૃદ્ધિ · ફુગાવો સમાયોજિત"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "નાણાકીય કેલ્ક્યુલેટર - મફત SIP, SWP અને એકસામટી રકમ કેલ્ક્યુલેટર",
+      "description": "રોકાણ આયોજન માટે મફત ઓનલાઇન નાણાકીય કેલ્ક્યુલેટર. ઇન્ટરેક્ટિવ ચાર્ટ સાથે SIP વળતર, SWP ઉપાડ અને એકસામટી રોકાણ ગણો.",
+      "keywords": "નાણાકીય કેલ્ક્યુલેટર, SIP કેલ્ક્યુલેટર, SWP કેલ્ક્યુલેટર, એકસામટી કેલ્ક્યુલેટર, રોકાણ આયોજન"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "રોકાણ વિગત",
+    "withdrawalDetails": "ઉપાડ વિગત",
+    "results": "પરિણામ",
+    "emptyInvestment": "પરિણામ જોવા માટે સાચી રોકાણ વિગત દાખલ કરો",
+    "emptyWithdrawal": "પરિણામ જોવા માટે સાચી ઉપાડ વિગત દાખલ કરો",
+    "fundsExhausted": "⚠️ સમયગાળો પૂરો થાય તે પહેલાં ભંડોળ ખૂટી જશે",
+    "yearlyBreakdown": "વાર્ષિક વિગત",
+    "rupees": "રૂપિયા"
+  },
+  "fields": {
+    "monthlyInvestment": "માસિક રોકાણ",
+    "totalInvestment": "કુલ રોકાણ",
+    "initialInvestment": "પ્રારંભિક રોકાણ",
+    "monthlyWithdrawal": "માસિક ઉપાડ",
+    "annualReturn": "અપેક્ષિત વાર્ષિક વળતર",
+    "timePeriod": "સમયગાળો",
+    "withdrawalPeriod": "ઉપાડ સમયગાળો"
+  },
+  "results": {
+    "totalInvestment": "કુલ રોકાણ",
+    "totalGains": "કુલ નફો",
+    "maturityAmount": "પરિપક્વતા રકમ",
+    "totalWithdrawn": "કુલ ઉપાડ",
+    "remainingAmount": "બાકી રકમ"
+  },
+  "chart": {
+    "investment": "રોકાણ",
+    "gains": "નફો",
+    "withdrawn": "ઉપાડ",
+    "remaining": "બાકી"
+  },
+  "grid": {
+    "year": "વર્ષ",
+    "totalInvestment": "કુલ રોકાણ",
+    "totalGains": "કુલ નફો",
+    "maturityAmount": "પરિપક્વતા રકમ",
+    "startBalance": "શરૂઆત બેલેન્સ",
+    "withdrawn": "ઉપાડ",
+    "endBalance": "અંત બેલેન્સ"
+  },
+  "inflation": {
+    "title": "ફુગાવો સમાયોજિત મૂલ્ય",
+    "rateLabel": "દર (%):",
+    "purchasingPower": "{{years}} વર્ષ પછી ખરીદ શક્તિ"
+  }
+}

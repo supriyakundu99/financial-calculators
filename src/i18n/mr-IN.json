@@ -1,0 +1,100 @@
+{
+  "app": {
+    "name": "आर्थिक कॅल्क्युलेटर",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc लोगो",
+    "footer": "© 2024 आर्थिक कॅल्क्युलेटर. React आणि Tailwind CSS सह बनवले."
+  },
+  "nav": {
+    "sip": "SIP कॅल्क्युलेटर",
+    "swp": "SWP कॅल्क्युलेटर",
+    "lumpsum": "एकरकमी कॅल्क्युलेटर"
+  },
+  "theme": {
+    "system": "सिस्टम",
+    "light": "लाइट",
+    "dark": "डार्क"
+  },
+  "home": {
+    "title": "आर्थिक कॅल्क्युलेटर",
+    "subtitle": "आमच्या मोफत ऑनलाइन कॅल्क्युलेटरने तुमची गुंतवणूक नियोजन करा",
+    "description": "SIP परतावा मोजा, इंटरॅक्टिव्ह चार्ट आणि वार्षिक तपशीलासह SWP काढणी नियोजन करा",
+    "cta": "मोजणी सुरू करा",
+    "stats": {
+      "calculators": "3 कॅल्क्युलेटर",
+      "calculatorsDesc": "SIP · SWP · एकरकमी",
+      "charts": "इंटरॅक्टिव्ह चार्ट",
+      "chartsDesc": "दृश्य विश्लेषण",
+      "inflation": "महागाई समायोजित",
+      "inflationDesc": "वास्तविक मूल्य अंतर्दृष्टी"
+    },
+    "sip": {
+      "title": "SIP कॅल्क्युलेटर",
+      "description": "पद्धतशीर गुंतवणूक योजनेचा परतावा मोजा",
+      "detail": "मासिक गुंतवणूक · चक्रवाढ वाढ · वार्षिक तपशील"
+    },
+    "swp": {
+      "title": "SWP कॅल्क्युलेटर",
+      "description": "पद्धतशीर काढणी योजना नियोजन करा",
+      "detail": "काढणी नियोजन · निधी कालावधी · शिल्लक ट्रॅकिंग"
+    },
+    "lumpsum": {
+      "title": "एकरकमी कॅल्क्युलेटर",
+      "description": "एकरकमी गुंतवणुकीचा परतावा मोजा",
+      "detail": "एकवेळ गुंतवणूक · दीर्घकालीन वाढ · महागाई समायोजित"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "आर्थिक कॅल्क्युलेटर - मोफत SIP, SWP आणि एकरकमी कॅल्क्युलेटर",
+      "description": "गुंतवणूक नियोजनासाठी मोफत ऑनलाइन आर्थिक कॅल्क्युलेटर. इंटरॅक्टिव्ह चार्टसह SIP परतावा, SWP काढणी आणि एकरकमी गुंतवणूक मोजा.",
+      "keywords": "आर्थिक कॅल्क्युलेटर, SIP कॅल्क्युलेटर, SWP कॅल्क्युलेटर, एकरकमी कॅल्क्युलेटर, गुंतवणूक नियोजन"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "गुंतवणूक तपशील",
+    "withdrawalDetails": "काढणी तपशील",
+    "results": "निकाल",
+    "emptyInvestment": "निकाल पाहण्यासाठी योग्य गुंतवणूक तपशील प्रविष्ट करा",
+    "emptyWithdrawal": "निकाल पाहण्यासाठी योग्य काढणी तपशील प्रविष्ट करा",
+    "fundsExhausted": "⚠️ कालावधी संपण्यापूर्वीच निधी संपेल",
+    "yearlyBreakdown": "वार्षिक तपशील",
+    "rupees": "रुपये"
+  },
+  "fields": {
+    "monthlyInvestment": "मासिक गुंतवणूक",
+    "totalInvestment": "एकूण गुंतवणूक",
+    "initialInvestment": "प्रारंभिक गुंतवणूक",
+    "monthlyWithdrawal": "मासिक काढणी",
+    "annualReturn": "अपेक्षित वार्षिक परतावा",
+    "timePeriod": "कालावधी",
+    "withdrawalPeriod": "काढणी कालावधी"
+  },
+  "results": {
+    "totalInvestment": "एकूण गुंतवणूक",
+    "totalGains": "एकूण नफा",
+    "maturityAmount": "परिपक्वता रक्कम",
+    "totalWithdrawn": "एकूण काढणी",
+    "remainingAmount": "उर्वरित रक्कम"
+  },
+  "chart": {
+    "investment": "गुंतवणूक",
+    "gains": "नफा",
+    "withdrawn": "काढणी",
+    "remaining": "उर्वरित"
+  },
+  "grid": {
+    "year": "वर्ष",
+    "totalInvestment": "एकूण गुंतवणूक",
+    "totalGains": "एकूण नफा",
+    "maturityAmount": "परिपक्वता रक्कम",
+    "startBalance": "सुरुवातीची शिल्लक",
+    "withdrawn": "काढणी",
+    "endBalance": "अंतिम शिल्लक"
+  },
+  "inflation": {
+    "title": "महागाई समायोजित मूल्य",
+    "rateLabel": "दर (%):",
+    "purchasingPower": "{{years}} वर्षांनंतर क्रयशक्ती"
+  }
+}

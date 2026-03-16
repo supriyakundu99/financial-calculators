@@ -1,0 +1,100 @@
+{
+  "app": {
+    "name": "ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc ਲੋਗੋ",
+    "footer": "© 2024 ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ. React ਅਤੇ Tailwind CSS ਨਾਲ ਬਣਾਇਆ ਗਿਆ।"
+  },
+  "nav": {
+    "sip": "SIP ਕੈਲਕੁਲੇਟਰ",
+    "swp": "SWP ਕੈਲਕੁਲੇਟਰ",
+    "lumpsum": "ਇਕਮੁਸ਼ਤ ਕੈਲਕੁਲੇਟਰ"
+  },
+  "theme": {
+    "system": "ਸਿਸਟਮ",
+    "light": "ਲਾਈਟ",
+    "dark": "ਡਾਰਕ"
+  },
+  "home": {
+    "title": "ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ",
+    "subtitle": "ਸਾਡੇ ਮੁਫ਼ਤ ਔਨਲਾਈਨ ਕੈਲਕੁਲੇਟਰਾਂ ਨਾਲ ਆਪਣੇ ਨਿਵੇਸ਼ ਦੀ ਯੋਜਨਾ ਬਣਾਓ",
+    "description": "SIP ਰਿਟਰਨ ਦੀ ਗਣਨਾ ਕਰੋ, ਇੰਟਰੈਕਟਿਵ ਚਾਰਟ ਅਤੇ ਸਾਲਾਨਾ ਵੇਰਵੇ ਨਾਲ SWP ਕਢਵਾਉਣ ਦੀ ਯੋਜਨਾ ਬਣਾਓ",
+    "cta": "ਗਣਨਾ ਸ਼ੁਰੂ ਕਰੋ",
+    "stats": {
+      "calculators": "3 ਕੈਲਕੁਲੇਟਰ",
+      "calculatorsDesc": "SIP · SWP · ਇਕਮੁਸ਼ਤ",
+      "charts": "ਇੰਟਰੈਕਟਿਵ ਚਾਰਟ",
+      "chartsDesc": "ਦ੍ਰਿਸ਼ਟੀਗਤ ਵਿਸ਼ਲੇਸ਼ਣ",
+      "inflation": "ਮਹਿੰਗਾਈ ਸਮਾਯੋਜਿਤ",
+      "inflationDesc": "ਅਸਲ ਮੁੱਲ ਸੂਝ"
+    },
+    "sip": {
+      "title": "SIP ਕੈਲਕੁਲੇਟਰ",
+      "description": "ਯੋਜਨਾਬੱਧ ਨਿਵੇਸ਼ ਯੋਜਨਾ ਦਾ ਰਿਟਰਨ ਗਣਨਾ ਕਰੋ",
+      "detail": "ਮਾਸਿਕ ਨਿਵੇਸ਼ · ਚੱਕਰਵਾਧੀ ਵਾਧਾ · ਸਾਲਾਨਾ ਵੇਰਵਾ"
+    },
+    "swp": {
+      "title": "SWP ਕੈਲਕੁਲੇਟਰ",
+      "description": "ਯੋਜਨਾਬੱਧ ਕਢਵਾਉਣ ਯੋਜਨਾ ਬਣਾਓ",
+      "detail": "ਕਢਵਾਉਣ ਯੋਜਨਾ · ਫੰਡ ਮਿਆਦ · ਬੈਲੇਂਸ ਟਰੈਕਿੰਗ"
+    },
+    "lumpsum": {
+      "title": "ਇਕਮੁਸ਼ਤ ਕੈਲਕੁਲੇਟਰ",
+      "description": "ਇਕਮੁਸ਼ਤ ਨਿਵੇਸ਼ ਦਾ ਰਿਟਰਨ ਗਣਨਾ ਕਰੋ",
+      "detail": "ਇੱਕਵਾਰੀ ਨਿਵੇਸ਼ · ਲੰਬੇ ਸਮੇਂ ਦਾ ਵਾਧਾ · ਮਹਿੰਗਾਈ ਸਮਾਯੋਜਿਤ"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ - ਮੁਫ਼ਤ SIP, SWP ਅਤੇ ਇਕਮੁਸ਼ਤ ਕੈਲਕੁਲੇਟਰ",
+      "description": "ਨਿਵੇਸ਼ ਯੋਜਨਾਬੰਦੀ ਲਈ ਮੁਫ਼ਤ ਔਨਲਾਈਨ ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ. ਇੰਟਰੈਕਟਿਵ ਚਾਰਟ ਨਾਲ SIP ਰਿਟਰਨ, SWP ਕਢਵਾਉਣ ਅਤੇ ਇਕਮੁਸ਼ਤ ਨਿਵੇਸ਼ ਗਣਨਾ ਕਰੋ।",
+      "keywords": "ਵਿੱਤੀ ਕੈਲਕੁਲੇਟਰ, SIP ਕੈਲਕੁਲੇਟਰ, SWP ਕੈਲਕੁਲੇਟਰ, ਇਕਮੁਸ਼ਤ ਕੈਲਕੁਲੇਟਰ, ਨਿਵੇਸ਼ ਯੋਜਨਾਬੰਦੀ"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "ਨਿਵੇਸ਼ ਵੇਰਵੇ",
+    "withdrawalDetails": "ਕਢਵਾਉਣ ਵੇਰਵੇ",
+    "results": "ਨਤੀਜੇ",
+    "emptyInvestment": "ਨਤੀਜੇ ਦੇਖਣ ਲਈ ਸਹੀ ਨਿਵੇਸ਼ ਵੇਰਵੇ ਦਰਜ ਕਰੋ",
+    "emptyWithdrawal": "ਨਤੀਜੇ ਦੇਖਣ ਲਈ ਸਹੀ ਕਢਵਾਉਣ ਵੇਰਵੇ ਦਰਜ ਕਰੋ",
+    "fundsExhausted": "⚠️ ਮਿਆਦ ਖਤਮ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਫੰਡ ਖਤਮ ਹੋ ਜਾਣਗੇ",
+    "yearlyBreakdown": "ਸਾਲਾਨਾ ਵੇਰਵਾ",
+    "rupees": "ਰੁਪਏ"
+  },
+  "fields": {
+    "monthlyInvestment": "ਮਾਸਿਕ ਨਿਵੇਸ਼",
+    "totalInvestment": "ਕੁੱਲ ਨਿਵੇਸ਼",
+    "initialInvestment": "ਸ਼ੁਰੂਆਤੀ ਨਿਵੇਸ਼",
+    "monthlyWithdrawal": "ਮਾਸਿਕ ਕਢਵਾਉਣ",
+    "annualReturn": "ਅਨੁਮਾਨਿਤ ਸਾਲਾਨਾ ਰਿਟਰਨ",
+    "timePeriod": "ਸਮਾਂ ਮਿਆਦ",
+    "withdrawalPeriod": "ਕਢਵਾਉਣ ਮਿਆਦ"
+  },
+  "results": {
+    "totalInvestment": "ਕੁੱਲ ਨਿਵੇਸ਼",
+    "totalGains": "ਕੁੱਲ ਲਾਭ",
+    "maturityAmount": "ਪਰਿਪੱਕਤਾ ਰਾਸ਼ੀ",
+    "totalWithdrawn": "ਕੁੱਲ ਕਢਵਾਇਆ",
+    "remainingAmount": "ਬਾਕੀ ਰਾਸ਼ੀ"
+  },
+  "chart": {
+    "investment": "ਨਿਵੇਸ਼",
+    "gains": "ਲਾਭ",
+    "withdrawn": "ਕਢਵਾਇਆ",
+    "remaining": "ਬਾਕੀ"
+  },
+  "grid": {
+    "year": "ਸਾਲ",
+    "totalInvestment": "ਕੁੱਲ ਨਿਵੇਸ਼",
+    "totalGains": "ਕੁੱਲ ਲਾਭ",
+    "maturityAmount": "ਪਰਿਪੱਕਤਾ ਰਾਸ਼ੀ",
+    "startBalance": "ਸ਼ੁਰੂਆਤੀ ਬੈਲੇਂਸ",
+    "withdrawn": "ਕਢਵਾਇਆ",
+    "endBalance": "ਅੰਤਿਮ ਬੈਲੇਂਸ"
+  },
+  "inflation": {
+    "title": "ਮਹਿੰਗਾਈ ਸਮਾਯੋਜਿਤ ਮੁੱਲ",
+    "rateLabel": "ਦਰ (%):",
+    "purchasingPower": "{{years}} ਸਾਲਾਂ ਬਾਅਦ ਖਰੀਦ ਸ਼ਕਤੀ"
+  }
+}
