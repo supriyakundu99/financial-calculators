@@ -8,44 +8,75 @@ export default function Header() {
   const { locale, setLocale } = useLocale();
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="relative z-50">
+      {/* Dark charcoal backdrop */}
+      <div className="absolute inset-0 bg-slate-950/95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 via-slate-800/40 to-slate-900/60" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 text-xl font-bold text-gray-900 dark:text-gray-100"
+            className="flex items-center gap-3 group"
           >
-            <img
-              src="/logo.svg"
-              alt={t("app.logoAlt")}
-              className="h-8 w-8 shrink-0 dark:brightness-110"
-            />
-            <span className="hidden sm:block">{t("app.name")}</span>
-            <span className="sm:hidden block">{t("app.nameShort")}</span>
+            <div className="relative">
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 blur-md opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+              <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <img
+                  src="/logo.svg"
+                  alt={t("app.logoAlt")}
+                  className="h-5 w-5 shrink-0 brightness-200"
+                />
+              </div>
+            </div>
+            <span className="hidden sm:block text-lg font-bold bg-gradient-to-r from-white via-indigo-200 to-white bg-clip-text text-transparent tracking-tight">
+              {t("app.name")}
+            </span>
+            <span className="sm:hidden block text-lg font-bold text-white">
+              {t("app.nameShort")}
+            </span>
           </Link>
 
-          <nav className="flex items-center space-x-2 sm:space-x-6">
-            <Link to="/sip" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
-              {t("nav.sip")}
-            </Link>
-            <Link to="/swp" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
-              {t("nav.swp")}
-            </Link>
-            <Link to="/lumpsum" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100">
-              {t("nav.lumpsum")}
-            </Link>
+          {/* Nav */}
+          <nav className="flex items-center gap-1 sm:gap-2">
+            {[
+              { to: "/sip",     key: "nav.sip" },
+              { to: "/swp",     key: "nav.swp" },
+              { to: "/lumpsum", key: "nav.lumpsum" },
+            ].map(({ to, key }) => (
+              <Link
+                key={to}
+                to={to}
+                className="relative px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200 rounded-lg group"
+              >
+                <span className="relative z-10">{t(key)}</span>
+                <span className="absolute inset-0 rounded-lg bg-white/0 group-hover:bg-white/10 transition-all duration-200" />
+              </Link>
+            ))}
 
-            <select
-              value={locale}
-              onChange={(e) => setLocale(e.target.value as Locale)}
-              className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            >
-              {(Object.entries(LOCALES) as [Locale, string][]).map(([code, label]) => (
-                <option key={code} value={code}>{label}</option>
-              ))}
-            </select>
+            {/* Locale selector */}
+            <div className="relative ml-1">
+              <select
+                value={locale}
+                onChange={(e) => setLocale(e.target.value as Locale)}
+                className="appearance-none pl-3 pr-7 py-1.5 text-sm rounded-lg
+                  bg-white/10 hover:bg-white/15 text-white border border-white/20
+                  hover:border-indigo-400/60 focus:border-indigo-400 focus:outline-none
+                  transition-all duration-200 cursor-pointer"
+              >
+                {(Object.entries(LOCALES) as [Locale, string][]).map(([code, label]) => (
+                  <option key={code} value={code} className="bg-gray-900 text-white">
+                    {label}
+                  </option>
+                ))}
+              </select>
+              <span className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 text-xs">▾</span>
+            </div>
 
-            <ThemeToggle />
+            <div className="ml-1">
+              <ThemeToggle />
+            </div>
           </nav>
         </div>
       </div>
