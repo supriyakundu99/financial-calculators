@@ -1,0 +1,100 @@
+{
+  "app": {
+    "name": "مالیاتی کیلکولیٹر",
+    "nameShort": "FinCalc",
+    "logoAlt": "FinCalc لوگو",
+    "footer": "© 2024 مالیاتی کیلکولیٹر۔ React اور Tailwind CSS کے ساتھ بنایا گیا۔"
+  },
+  "nav": {
+    "sip": "SIP کیلکولیٹر",
+    "swp": "SWP کیلکولیٹر",
+    "lumpsum": "یکمشت کیلکولیٹر"
+  },
+  "theme": {
+    "system": "سسٹم",
+    "light": "روشن",
+    "dark": "تاریک"
+  },
+  "home": {
+    "title": "مالیاتی کیلکولیٹر",
+    "subtitle": "ہمارے مفت آن لائن کیلکولیٹروں سے اپنی سرمایہ کاری کی منصوبہ بندی کریں",
+    "description": "SIP منافع حساب کریں، انٹرایکٹو چارٹس اور سالانہ تفصیل کے ساتھ SWP نکاسی کی منصوبہ بندی کریں",
+    "cta": "حساب شروع کریں",
+    "stats": {
+      "calculators": "3 کیلکولیٹر",
+      "calculatorsDesc": "SIP · SWP · یکمشت",
+      "charts": "انٹرایکٹو چارٹس",
+      "chartsDesc": "بصری تجزیہ",
+      "inflation": "افراط زر ایڈجسٹ",
+      "inflationDesc": "حقیقی قدر کی بصیرت"
+    },
+    "sip": {
+      "title": "SIP کیلکولیٹر",
+      "description": "منظم سرمایہ کاری منصوبے کا منافع حساب کریں",
+      "detail": "ماہانہ سرمایہ کاری · مرکب نمو · سالانہ تفصیل"
+    },
+    "swp": {
+      "title": "SWP کیلکولیٹر",
+      "description": "منظم نکاسی منصوبہ بنائیں",
+      "detail": "نکاسی منصوبہ بندی · فنڈ مدت · بیلنس ٹریکنگ"
+    },
+    "lumpsum": {
+      "title": "یکمشت کیلکولیٹر",
+      "description": "یکمشت سرمایہ کاری کا منافع حساب کریں",
+      "detail": "ایک بار سرمایہ کاری · طویل مدتی نمو · افراط زر ایڈجسٹ"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "مالیاتی کیلکولیٹر - مفت SIP، SWP اور یکمشت کیلکولیٹر",
+      "description": "سرمایہ کاری کی منصوبہ بندی کے لیے مفت آن لائن مالیاتی کیلکولیٹر۔ انٹرایکٹو چارٹس کے ساتھ SIP منافع، SWP نکاسی اور یکمشت سرمایہ کاری حساب کریں۔",
+      "keywords": "مالیاتی کیلکولیٹر، SIP کیلکولیٹر، SWP کیلکولیٹر، یکمشت کیلکولیٹر، سرمایہ کاری منصوبہ بندی"
+    }
+  },
+  "calculator": {
+    "investmentDetails": "سرمایہ کاری کی تفصیل",
+    "withdrawalDetails": "نکاسی کی تفصیل",
+    "results": "نتائج",
+    "emptyInvestment": "نتائج دیکھنے کے لیے درست سرمایہ کاری کی تفصیل درج کریں",
+    "emptyWithdrawal": "نتائج دیکھنے کے لیے درست نکاسی کی تفصیل درج کریں",
+    "fundsExhausted": "⚠️ مدت ختم ہونے سے پہلے فنڈ ختم ہو جائیں گے",
+    "yearlyBreakdown": "سالانہ تفصیل",
+    "rupees": "روپے"
+  },
+  "fields": {
+    "monthlyInvestment": "ماہانہ سرمایہ کاری",
+    "totalInvestment": "کل سرمایہ کاری",
+    "initialInvestment": "ابتدائی سرمایہ کاری",
+    "monthlyWithdrawal": "ماہانہ نکاسی",
+    "annualReturn": "متوقع سالانہ منافع",
+    "timePeriod": "مدت",
+    "withdrawalPeriod": "نکاسی مدت"
+  },
+  "results": {
+    "totalInvestment": "کل سرمایہ کاری",
+    "totalGains": "کل منافع",
+    "maturityAmount": "میچورٹی رقم",
+    "totalWithdrawn": "کل نکاسی",
+    "remainingAmount": "بقایا رقم"
+  },
+  "chart": {
+    "investment": "سرمایہ کاری",
+    "gains": "منافع",
+    "withdrawn": "نکاسی",
+    "remaining": "بقایا"
+  },
+  "grid": {
+    "year": "سال",
+    "totalInvestment": "کل سرمایہ کاری",
+    "totalGains": "کل منافع",
+    "maturityAmount": "میچورٹی رقم",
+    "startBalance": "ابتدائی بیلنس",
+    "withdrawn": "نکاسی",
+    "endBalance": "آخری بیلنس"
+  },
+  "inflation": {
+    "title": "افراط زر ایڈجسٹ قدر",
+    "rateLabel": "شرح (%):",
+    "purchasingPower": "{{years}} سال بعد قوت خرید"
+  }
+}

@@ -6,6 +6,7 @@ import mrIN from "../i18n/mr-IN.json";
 import paIN from "../i18n/pa-IN.json";
 import taIN from "../i18n/ta-IN.json";
 import teIN from "../i18n/te-IN.json";
+import urIN from "../i18n/ur-IN.json";
 import { useLocale } from "../contexts/LocaleContext";
 
 const translations: Record<string, typeof enUS> = {
@@ -17,6 +18,7 @@ const translations: Record<string, typeof enUS> = {
   "pa-IN": paIN as typeof enUS,
   "ta-IN": taIN as typeof enUS,
   "te-IN": teIN as typeof enUS,
+  "ur-IN": urIN as typeof enUS,
 };
 
 function resolve(obj: any, key: string): string {

@@ -9,7 +9,10 @@ export const LOCALES = {
   "pa-IN": "ਪੰਜਾਬੀ",
   "ta-IN": "தமிழ்",
   "te-IN": "తెలుగు",
+  "ur-IN": "اردو",
 } as const;
+
+export const RTL_LOCALES = new Set<Locale>(["ur-IN"]);
 
 export type Locale = keyof typeof LOCALES;
 
