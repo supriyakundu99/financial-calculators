@@ -12,6 +12,7 @@ A modern, responsive web application providing a suite of financial calculators 
 *   **Inflation Adjusted Values:** All calculators include an option to see the future value or remaining amount adjusted for expected inflation.
 *   **Interactive Charts:** Visualize the proportion of your investments versus gains (or withdrawn versus remaining funds) using interactive Pie charts.
 *   **Yearly Breakdown:** Detailed year-by-year breakdown of your investment journey or withdrawal schedule in a DataGrid format.
+*   **Multi-Language Support:** Available in 9 languages — English, हिन्दी, বাংলা, ગુજરાતી, मराठी, ਪੰਜਾਬੀ, தமிழ், తెలుగు, and اردو. Urdu includes full RTL layout support.
 *   **Dark/Light Mode:** Includes a theme toggle to seamlessly switch between light and dark modes based on your preference.
 *   **Responsive Design:** Fully responsive layout that works beautifully on desktop, tablet, and mobile devices.
 
@@ -55,6 +56,9 @@ The compiled assets will be available in the `dist/` directory.
 
 *   `src/components/`: Contains the main calculator components (`SIPCalculator`, `LumpsumCalculator`, `SWPCalculator`) and layout components (`Header`, `Footer`, `ThemeToggle`).
 *   `src/controls/`: Contains reusable generic UI controls (`CurrencyInput`, `DataGrid`, `InflationAdjustedValue`).
+*   `src/i18n/`: Contains JSON translation files for each supported locale (e.g. `en-US.json`, `hi-IN.json`, `ur-IN.json`, etc.).
+*   `src/contexts/`: Contains React context providers for theme and locale (language) state.
+*   `src/hooks/`: Contains custom hooks including `useTranslation` for accessing translated strings.
 *   `src/pages/`: Contains the page-level components corresponding to different routes.
 *   `src/utils/`: Contains utility functions, such as number formatters.
 *   `src/App.tsx`: The root component setting up React Router and the application layout.
