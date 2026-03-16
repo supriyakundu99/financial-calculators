@@ -2,8 +2,10 @@ import { createContext, useContext, useState } from "react";
 
 export const LOCALES = {
   "en-US": "English",
-  "bn-BD": "বাংলা",
+  "bn-IN": "বাংলা",
   "hi-IN": "हिन्दी",
+  "ta-IN": "தமிழ்",
+  "te-IN": "తెలుగు",
 } as const;
 
 export type Locale = keyof typeof LOCALES;
